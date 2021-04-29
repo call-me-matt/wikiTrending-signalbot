@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  bot:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+    # the account used for sending messages:
+    # - USERNAME="+1234567889"
+    # the group to address messages to:
+    # - GROUP_ID="yQnaaaaaaaa/xxxxxxxxxxxxxxxx0="
+    - LANGUAGE=de
+    - HOURS_IDLE=8
+    volumes:
+      - ./docker/signal_config/:/app/signal_config
+      - ./docker/src/:/app/trending

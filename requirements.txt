@@ -1,0 +1,4 @@
+pysqlite3
+wikipedia
+pandas
+fnmatch2
